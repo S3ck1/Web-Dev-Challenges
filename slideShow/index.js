@@ -8,16 +8,19 @@ img2 = "url('./images/2.png')";
 img3 = "url('./images/3.png')";
 img4 = "url('./images/4.jpg')";
 img5 = "url('./images/5.png')";
+//You can add an image url in this array
 let imagesArray = [img1, img2, img3, img4, img5];
 let imagesCant = imagesArray.length - 1;
 
 let slideNumbersButtons = [];
+//create buttons and add them to an array
 for (let i = 0; i <= imagesCant; i++) {
   slideNumbersButtons[i] = document.createElement("button");
   let buttonNumber = i + 1;
   slideNumbersButtons[i].innerHTML = buttonNumber;
 }
 
+//Add buttons to buttons container
 for (let i = 0; i < imagesArray.length; i++) {
   slideNumbersContainer.appendChild(slideNumbersButtons[i]);
 }
